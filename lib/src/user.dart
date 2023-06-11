@@ -17,6 +17,7 @@ abstract class User extends Equatable {
     this.firstName,
     required this.id,
     this.imageUrl,
+    this.imageAsset,
     this.lastName,
     this.lastSeen,
     this.metadata,
@@ -29,6 +30,7 @@ abstract class User extends Equatable {
     String? firstName,
     required String id,
     String? imageUrl,
+    dynamic imageAsset,
     String? lastName,
     int? lastSeen,
     Map<String, dynamic>? metadata,
@@ -50,6 +52,8 @@ abstract class User extends Equatable {
 
   /// Remote image URL representing user's avatar.
   final String? imageUrl;
+
+  final dynamic imageAsset;
 
   /// Last name of the user.
   final String? lastName;
@@ -103,6 +107,7 @@ class _User extends User {
     super.firstName,
     required super.id,
     super.imageUrl,
+    super.imageAsset,
     super.lastName,
     super.lastSeen,
     super.metadata,
